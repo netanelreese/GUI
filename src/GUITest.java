@@ -26,7 +26,7 @@ public class GUITest {
 		JButton goats = new JButton("At Goats");
 		JButton monkeys = new JButton("at code monkeys");
 		JButton doNotPushMe = new JButton("my finger is on the button");
-		
+		// this is an anonymous class :o
 		men.addActionListener(new ActionListener() {
 
 			@Override
@@ -36,6 +36,13 @@ public class GUITest {
 			}
 		});
 		
+		goats.addActionListener(new ActionListener() { // do not need layout manggager
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.out.println("Goat cheese is kinda rank");
+			}
+		});
 		FlowLayout layout = new FlowLayout();
 		
 		drJ.setLayout(layout);
