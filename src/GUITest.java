@@ -1,4 +1,6 @@
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,6 +27,15 @@ public class GUITest {
 		JButton monkeys = new JButton("at code monkeys");
 		JButton doNotPushMe = new JButton("my finger is on the button");
 		
+		men.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.out.println("STOP STARING!!!!!");
+			}
+		});
+		
 		FlowLayout layout = new FlowLayout();
 		
 		drJ.setLayout(layout);
@@ -33,6 +44,8 @@ public class GUITest {
 		drJ.add(goats);
 		drJ.add(monkeys);
 		drJ.add(doNotPushMe);
+		
+		
 		
 		drJ.pack();
 		
